@@ -6,5 +6,5 @@ INNER JOIN Customer c
 ON e.EmployeeId = c.SupportRepId
 LEFT JOIN Invoice i
 ON c.CustomerId = i.CustomerId
-WHERE i.InvoiceDate LIKE '%2009%'
+WHERE i.InvoiceDate BETWEEN '2009-01-01 00:00:00' and '2009-12-31 11:59:59'
 GROUP BY e.LastName) as aggregateData
